@@ -11,19 +11,19 @@ export const messageHandler = (message: Message) => {
   const user = message.from;
   const { node: currentNode, firstMessage } = getUserCurrentNode(user);
   if (firstMessage) {
-    const formattedMessage = formatNodeMessage(currentNode);
+    const formattedMessage = formatNodeMessage(currentNode, false);
     client.sendText(user, formattedMessage);
     return;
   }
   const optionSelected = getOptionFromMessage(
     message.body,
-    currentNode.options
+    currentNode
   );
   if (!optionSelected) {
     client.sendText(user, "Essa opção não existe :(");
     return;
   }
   if (!isEndNode(optionSelected)) updateUserNode(user, optionSelected);
-  const formattedMessage = formatNodeMessage(optionSelected);
+  const formattedMessage = formatNodeMessage(optionSelected, !optionSelected.isRootNote);
   client.sendText(user, formattedMessage);
 };
