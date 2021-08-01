@@ -1,8 +1,10 @@
+import IMessage from "./IMessage";
+
 export default interface IMessageNode {
-  message: string;
+  message: IMessage[];
   position: number;
   title?: string | null;
   parentNode?: IMessageNode | null;
   options?: IMessageNode[] | null,
-  isRootNote: boolean,
+  isRootNode: boolean,
 }

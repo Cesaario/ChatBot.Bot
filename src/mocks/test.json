@@ -1,0 +1,81 @@
+{
+  "messages": [
+    {
+      "type": "TEXT",
+      "text": "Seja bem vindo(a)!\nO que deseja saber?"
+    }
+  ],
+  "position": 0,
+  "title": "",
+  "isRootNode": true,
+  "options": [
+    {
+      "messages": [
+        {
+          "type": "TEXT",
+          "text": "Check-In: 12h\nCheck-Out: 14h"
+        }
+      ],
+      "title": "Horário de Check-In e Check-Out",
+      "position": 0,
+      "isRootNode": false
+    },
+    {
+      "messages": [
+        {
+          "type": "TEXT",
+          "text": "(31) 99999-9999"
+        }
+      ],
+      "title": "Telefone de atendimento",
+      "position": 1,
+      "isRootNode": false
+    },
+    {
+      "messages": [
+        {
+          "type": "TEXT",
+          "text": "Nossos quartos disponíveis são:"
+        }
+      ],
+      "title": "Quartos disponíveis",
+      "position": 2,
+      "isRootNode": false,
+      "options": [
+        {
+          "messages": [
+            {
+              "type": "TEXT",
+              "text": "Esse é um quarto com 2 camas de casal."
+            }
+          ],
+          "title": "Quarto A",
+          "position": 0,
+          "isRootNode": false
+        },
+        {
+          "messages": [
+            {
+              "type": "TEXT",
+              "text": "Esse é um quarto com uma cama de casal e duas de solteiro."
+            }
+          ],
+          "title": "Quarto B",
+          "position": 1,
+          "isRootNode": false
+        },
+        {
+          "messages": [
+            {
+              "type": "TEXT",
+              "text": "Esse é um quarto sem camas. Você dorme no chão :)"
+            }
+          ],
+          "title": "Quarto C",
+          "position": 2,
+          "isRootNode": false
+        }
+      ]
+    }
+  ]
+}
